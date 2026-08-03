@@ -5,8 +5,8 @@ use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    // Auth::loginUsingId(4);
-    Auth::logout();
+    Auth::loginUsingId(4);
+    // Auth::logout();
 
     // throw new Exception('This is a test exception');
     // Log::channel('custom')->info('This is a test log message');
@@ -14,6 +14,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/login', function () {
-    echo 'login';
-})->name('login');
+// Route::get('/login', function () {
+//     echo 'login';
+// })->name('login');

@@ -65,6 +65,14 @@ return [
             'replace_placeholders' => true,
         ],
 
+        'custom' => [
+            'driver' => 'monolog',
+            'handler' => StreamHandler::class,
+            'handler_with' => [
+                'stream' => storage_path('logs/custom.log')
+            ]
+        ],
+
         'daily' => [
             'driver' => 'daily',
             'path' => storage_path('logs/laravel.log'),
